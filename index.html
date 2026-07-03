@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>HatchVerse</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="app">
+
+    <!-- Верхняя панель -->
+    <header class="top-bar">
+
+        <div class="currency">
+            <div class="currency-card">
+                🪙
+                <span id="coins">0</span>
+            </div>
+
+            <div class="currency-card">
+                💎
+                <span id="gems">0</span>
+            </div>
+
+            <div class="currency-card">
+                ⚡
+                <span id="income">0/sec</span>
+            </div>
+        </div>
+
+    </header>
+
+
+    <!-- Основной экран -->
+    <main id="screens">
+
+    <!-- HOME -->
+    <section class="screen active-screen" id="homeScreen">
+
+        <h1 class="game-title">
+            HatchVerse
+        </h1>
+
+        <div class="egg-container">
+
+            <div id="mainEgg" class="egg">
+                🥚
+            </div>
+
+        </div>
+
+        <button id="openEggBtn" class="main-button">
+            OPEN EGG
+        </button>
+
+    </section>
+
+    <!-- PETS -->
+    <section class="screen" id="petsScreen">
+
+    <h2>🐾 Pets</h2>
+
+    <div class="equip-panel">
+
+        <div class="equip-header">
+
+    <h3>Equipped</h3>
+
+    <button id="equipBestBtn" class="small-button">
+        Equip Best
+    </button>
+
+</div>
+
+        <div id="equipSlots" class="equip-slots">
+
+            <div class="slot"></div>
+            <div class="slot"></div>
+            <div class="slot"></div>
+            <div class="slot"></div>
+            <div class="slot"></div>
+
+        </div>
+
+    </div>
+
+    <div id="petsList" class="pets-list"></div>
+
+</section>
+
+    <!-- WORLDS -->
+    <section class="screen" id="worldsScreen">
+
+        <h2>🌍 Worlds</h2>
+
+        <p>New worlds coming soon.</p>
+
+    </section>
+
+    <!-- SHOP -->
+    <section class="screen" id="shopScreen">
+
+        <h2>🛒 Shop</h2>
+
+        <p>Buy boosts and eggs.</p>
+
+    </section>
+
+    <!-- SETTINGS -->
+    <section class="screen" id="settingsScreen">
+
+    <h2>⚙️ Settings</h2>
+
+    <button id="resetGameBtn" class="main-button danger-button">
+    🔄 Reset Progress
+</button>
+
+</section>
+
+</main>
+
+
+    <!-- Нижнее меню -->
+    <nav class="bottom-nav">
+
+    <button class="nav-btn active" data-screen="homeScreen">
+        🏠
+        <span>Home</span>
+    </button>
+
+    <button class="nav-btn" data-screen="petsScreen">
+        🐾
+        <span>Pets</span>
+    </button>
+
+    <button class="nav-btn" data-screen="worldsScreen">
+        🌍
+        <span>Worlds</span>
+    </button>
+
+    <button class="nav-btn" data-screen="shopScreen">
+        🛒
+        <span>Shop</span>
+    </button>
+
+    <button class="nav-btn" data-screen="settingsScreen">
+        ⚙️
+        <span>Settings</span>
+    </button>
+
+</nav>
+
+</div>
+<div id="petPopup" class="popup hidden">
+
+    <div class="popup-card">
+
+        <h2>You Got!</h2>
+
+        <div id="popupPetName" class="popup-name"></div>
+
+        <div id="popupPetRarity" class="popup-rarity"></div>
+
+        <div id="popupPetIncome" class="popup-income"></div>
+
+        <button id="closePopup" class="main-button">
+            Continue
+        </button>
+
+    </div>
+
+</div>
+<script type="module" src="js/main.js"></script>
+
+</body>
+</html>
